@@ -8,12 +8,20 @@
 			margin: 0;
 		}
 		canvas {
+			z-index: -1;
+			left: 0;
+			right: 0;
+			position: absolute;
 			background-color: black;
+		}
+		h1{
+			color: red;
 		}
 	</style>
 </head>
 <body>
 	<canvas id="canvas">您的浏览器不支持canvas标签，请您更换浏览器！</canvas>
+	
 	<script>
 		var can = document.getElementById('canvas');
 		//设置绘图环境
@@ -27,7 +35,7 @@
 		function draw(){
 			//设置透明度，减弱效果
 			ctx.fillStyle = "rgba(0,0,0,0.05)";
-			//绘制位置
+			//绘制页面
 			ctx.fillRect(0,0,w,h);
 			ctx.fillStyle = "#0f0";
 			
@@ -47,10 +55,7 @@
 		}
 		//重复运行程序
 		setInterval(draw,40);
-		
-
-
-		
+				
 	</script>
 </body>
 </html>
